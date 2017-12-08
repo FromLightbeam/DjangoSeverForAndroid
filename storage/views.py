@@ -18,4 +18,3 @@ class ProductsView(View):
         productsJSON = serializers.serialize("json", Product.objects.filter(category=request.GET['pk']))
         responce = HttpResponse(productsJSON, content_type="application/json")
         return responce
-
